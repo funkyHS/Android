@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--
+
+    1. match_parent（官方推荐）,fill_parent 意义相同，当前控件的大小和父布局的大小一样.
+    2. wrap_content，表示让控件的大小能够刚好包含住里面的内容.
+    3. android:gravity="center" 指定文字的对齐方式，这里指定了center，效果等同于 center_vertical | center_horizontal,在垂直和水平方向都居中对齐
+    4. android:textSize="24sp" 指定文字大小用 sp做单位
+    5. android:textColor="#00ff00" 指定文字颜色
+
+    -->
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="#00ff00"
+        android:text="This is TextView"/>
+
+
+    <!--
+
+    1. 系统会对 Button中的所有英文字母进行大写转换，android:textAllCaps="false"禁用这个默认特性
+
+    -->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:textAllCaps="false"/>
+
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type something here"
+        android:maxLines="2"/>
+
+
+    <ImageView
+        android:id="@+id/image_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"/>
+
+
+
+    <!--
+        1. android:visibility 可以指定控件是否可见
+            visible表示控件可见，默认值；
+            invisible表示控件不可见，透明状态
+            gone表示控件不可见，不在占用任何屏幕空间
+        2. 通过代码设置可见性 progressBar.setVisibility(View.VISIBLE)
+    -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--
+        1. 通过style属性，可以指定成水平进度条
+        2. android:max 设置最大值
+    -->
+
+    <ProgressBar
+        android:id="@+id/progress_bar_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"/>
+
+
+
+
+
+</LinearLayout>
